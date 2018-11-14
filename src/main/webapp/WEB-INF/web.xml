@@ -14,5 +14,16 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>HealthCheckFilter</filter-name>
+        <filter-class>org.example.tomcat.filters.HealthCheckFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>HealthCheckFilter</filter-name>
+        <url-pattern>/health</url-pattern>
+    </filter-mapping>
+
     <distributable/>
+
 </web-app>
